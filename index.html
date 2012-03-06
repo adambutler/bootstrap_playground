@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstap Playground</title>
+		<meta charset="UTF-8">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+			body {
+				background-color: #edeae3;
+			}
+			
+			.container {
+				
+				width: 700px;
+			
+			}
+			
+			table td {
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="container">
+			<h1>1 - Popovers</h1>
+			<br/>
+			<a id="demo1-1" href="#" class="btn btn-danger" rel="popover" data-content="Drag me to your bookmark bar!">hover for popover</a>
+			<hr/>
+			<h1>2 - Basic Table</h1>
+			<br/>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Field</th>
+						<th>Data</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Title - <code>{{idea.title}}</code></td>
+						<td>The Title</td>
+					</tr>
+					<tr>
+						<td>Content - <code>{{idea.content}}</code></td>
+						<td>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius, elit pharetra laoreet consequat, nisl urna volutpat tellus, non porttitor augue neque vel est. Nam vehicula aliquam tortor, sed lobortis nisl auctor sit amet. Nullam eu lacus sed quam lacinia tristique feugiat eget ligula. Donec sit amet arcu vel risus gravida vehicula. Quisque lacus turpis, lobortis quis vehicula eu, adipiscing id tellus. Maecenas varius urna eu orci dignissim viverra. Aliquam tempor adipiscing urna, vitae scelerisque leo blandit suscipit. Vivamus ut mi et eros varius consequat sed at dolor. Integer interdum enim ut lacus imperdiet quis interdum felis vestibulum. Suspendisse potenti. Proin volutpat est a enim ultricies varius. Proin neque arcu, pulvinar nec euismod et, vestibulum non augue. Morbi nulla nibh, ornare et convallis quis, condimentum non dolor. Ut bibendum condimentum ligula, vitae euismod felis pharetra ut. In nec metus quam. Nunc convallis egestas nisl sit amet dignissim.
+						</td>
+					</tr>
+					<tr>
+						<td>Custom 1 - <code>{{idea.custom1}}</code></td>
+						<td>
+							<pre>http://www.prelovac.com/vladimir/wp-content/uploads/2008/03/example.jpg</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>Custom 2 - <code>{{idea.custom2}}</code></td>
+						<td>
+							<pre>true</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>Custom 3 - <code>{{idea.custom3}}</code></td>
+						<td>
+							<pre>10</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>Custom 4 - <code>{{idea.custom4}}</code></td>
+						<td>
+							<pre>
+&lt;div&gt;
+  &lt;h1&gt;Someone posted this code snippet&lt;/h1&gt;
+&lt;/div&gt;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			
+			
+			
+			
+			
+			<h1>3 - Modal</h1>
+			<br/>
+			<a class="btn" data-toggle="modal" id="demo3-1" href="#demo3-2" >Launch Modal</a>
+			
+			<style type="text/css">
+				.modal.custom_theme_type {
+					width: 650px;
+				}
+				
+				.modal.custom_theme_type ul.thumbnails li, .modal.custom_theme_type ul.thumbnails{
+					margin-bottom: 0;
+				}
+			</style>
+			
+			<!-- Start Modal -->
+			<div class="modal fade  span10 custom_theme_type" id="demo3-2">
+			  <div class="modal-header">
+			    <a class="close" data-dismiss="modal">×</a>
+			    <h3>New Custom Theme</h3>
+			  </div>
+			  <div class="modal-body">
+			  	<ul class="thumbnails">
+		        <li class="span4">
+		          <div class="thumbnail">
+		            <br/><img src="http://rusic.dev/assets/home/octocat.png" alt=""><br/>
+		            <div class="caption">
+		              <h5>Github</h5>
+		              <p>If your a ninja developer you can hook your GitHub repository directly to Rusic. When you push to GitHub Rusic will automatically grab your last commit.</p>
+		              <p><a href="#" class="btn btn-primary">Use GitHub</a>
+		            </div>
+		          </div>
+		        </li>
+		        <li class="span4">
+		          <div class="thumbnail">
+		          	<br/><img src="http://rusic.dev/assets/home/html5logo.png" alt=""><br/>
+		            <div class="caption">
+		              <h5>Web based editor</h5>
+		              <p>If you’re a designer like me you don’t always want to fiddle around with GitHub</p>
+		              <p><a href="#" class="btn btn-primary">Use the Web based editor</a>
+		            </div>
+		          </div>
+		        </li>
+		      </ul>
+			  </div>
+			</div>
+			<!-- End Modal -->
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$('#demo1-1').popover();
+				
+				$('#demo3-2').modal({
+					show: false
+				});
+				
+			});
+		</script>
+	</body>
+</html>
