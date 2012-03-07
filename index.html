@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Bootstap Playground</title>
-		<meta charset="UTF-8">
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-		
-		<style type="text/css">
-			body {
-				background-color: #edeae3;
-			}
-			
-			.container {
+  <head>
+    
+    <!-- Meta -->
+    <title>Bootstap Playground</title>
+    <meta charset="UTF-8">
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- jQuery Plugins -->
+    
+    <style type="text/css">
+      
+      body {
+        background: #edeae3;
+      }
+      
+      .demo {
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border: 1px solid #ccc;
+      }
+      
+      .demo h1:first-child {
+        margin-bottom: 20px;
+      }
+      
+    </style>
+    
+    <!-- Demo Styles -->
+      <style type="text/css">
+				.modal#overlay-3 {
+					width: 650px;
+				}
 				
-				width: 700px;
-			
-			}
-			
-			table td {
-				background-color: #fff;
-			}
-		</style>
-	</head>
-	<body>
-		
-		<div class="container">
-			<h1>1 - Popovers</h1>
-			<br/>
-			<a id="demo1-1" href="#" class="btn btn-danger" rel="popover" data-content="Drag me to your bookmark bar!">hover for popover</a>
-			<hr/>
-			<h1>2 - Basic Table</h1>
-			<br/>
-			<table class="table table-bordered table-striped">
+				.modal#overlay-3 ul.thumbnails li, .modal.custom_theme_type ul.thumbnails{
+					margin-bottom: 0;
+				}
+			</style>
+    
+  </head>
+  <body>
+    <!-- Demo 1 -->
+    <div class="container demo" id="demo1">
+      <h1>Demo 1 - Popovers</h1>
+			<a href="#" class="btn btn-danger" rel="popover" data-title="Uh-oh" data-content="You launched the popover">hover for popover</a>
+    </div>
+    
+    <!-- Demo 2 -->
+    <div class="container demo" id="demo2">
+      <h1>Demo 2 - Basic Table (rusic)</h1>
+      <table class="table table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>Field</th>
@@ -71,86 +96,78 @@
 					<tr>
 						<td>Custom 4 - <code>{{idea.custom4}}</code></td>
 						<td>
-							<pre>
-&lt;div&gt;
-  &lt;h1&gt;Someone posted this code snippet&lt;/h1&gt;
-&lt;/div&gt;</pre>
+							<pre>&lt;div&gt;<br/>  &lt;h1&gt;Someone posted this code snippet&lt;/h1&gt;<br/>&lt;/div&gt;</pre>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-			
-			
-			
-			
-			
-			
-			
-			<h1>3 - Modal</h1>
-			<br/>
-			<a class="btn" data-toggle="modal" id="demo3-1" href="#demo3-2" >Launch Modal</a>
-			
-			<style type="text/css">
-				.modal.custom_theme_type {
-					width: 650px;
-				}
-				
-				.modal.custom_theme_type ul.thumbnails li, .modal.custom_theme_type ul.thumbnails{
-					margin-bottom: 0;
-				}
-			</style>
-			
-			<!-- Start Modal -->
-			<div class="modal fade  span10 custom_theme_type" id="demo3-2">
-			  <div class="modal-header">
-			    <a class="close" data-dismiss="modal">×</a>
-			    <h3>New Custom Theme</h3>
-			  </div>
-			  <div class="modal-body">
-			  	<ul class="thumbnails">
-		        <li class="span4">
-		          <div class="thumbnail">
-		            <br/><img src="assets/octocat.png" alt=""><br/>
-		            <div class="caption">
-		              <h5>Github</h5>
-		              <p>If your a ninja developer you can hook your GitHub repository directly to Rusic. When you push to GitHub Rusic will automatically grab your last commit.</p>
-		              <p><a href="#" class="btn btn-primary">Use GitHub</a>
-		            </div>
-		          </div>
-		        </li>
-		        <li class="span4">
-		          <div class="thumbnail">
-		          	<br/><img src="assets/html5logo.png" alt=""><br/>
-		            <div class="caption">
-		              <h5>Web based editor</h5>
-		              <p>If you’re a designer like me you don’t always want to fiddle around with GitHub</p>
-		              <p><a href="#" class="btn btn-primary">Use the Web based editor</a>
-		            </div>
-		          </div>
-		        </li>
-		      </ul>
-			  </div>
-			</div>
-			<!-- End Modal -->
-		
-		
-		
-		
-		</div>
-		
-		
-		
-		
-		<script type="text/javascript">
-			$(document).ready(function() {
-				
-				$('#demo1-1').popover();
-				
-				$('#demo3-2').modal({
-					show: false
-				});
-				
+    </div>
+    
+    <!-- Demo 3 -->
+    <div class="container demo" id="demo3">
+      <h1>Demo 3 - Modal (rusic)</h1>
+			<a class="btn" data-toggle="modal"  href="#overlay-3" >Launch Modal</a>
+    </div>
+    
+    <!-- Demo 4 -->
+    <div class="container demo" id="demo4">
+      <h1>Demo 4 - Button Groups (skadoosh)</h1>
+			 <div class="btn-group">
+        <a class="btn" href="#"><i class="icon-home"></i> adambutler</a>
+        <a class="btn" href="#"><i class="icon-user"></i> friends</a>
+        <a class="btn active" href="#"><i class="icon-heart"></i> following</a>
+      </div>
+    </div>
+    
+    
+    <!-- Overlays -->
+    
+      <!-- Demo 3 -->
+      
+        <div class="modal fade  span10 custom_theme_type" id="overlay-3">
+  			  <div class="modal-header">
+  			    <a class="close" data-dismiss="modal">×</a>
+  			    <h3>New Custom Theme</h3>
+  			  </div>
+  			  <div class="modal-body">
+  			  	<ul class="thumbnails">
+  		        <li class="span4">
+  		          <div class="thumbnail">
+  		            <br/><img src="assets/octocat.png" alt=""><br/>
+  		            <div class="caption">
+  		              <h5>Github</h5>
+  		              <p>If your a ninja developer you can hook your GitHub repository directly to Rusic. When you push to GitHub Rusic will automatically grab your last commit.</p>
+  		              <p><a href="#" class="btn btn-primary">Use GitHub</a>
+  		            </div>
+  		          </div>
+  		        </li>
+  		        <li class="span4">
+  		          <div class="thumbnail">
+  		          	<br/><img src="assets/html5logo.png" alt=""><br/>
+  		            <div class="caption">
+  		              <h5>Web based editor</h5>
+  		              <p>If you’re a designer like me you don’t always want to fiddle around with GitHub</p>
+  		              <p><a href="#" class="btn btn-primary">Use the Web based editor</a>
+  		            </div>
+  		          </div>
+  		        </li>
+  		      </ul>
+  			  </div>
+  			</div>
+  </body>
+  
+  <script type="text/javascript">
+    
+    // Demo 1
+    
+      $('#demo1 a').popover();
+      
+    // Demo 3
+    
+      $('.modal#overlay-3').modal({
+				show: false
 			});
-		</script>
-	</body>
+    
+  </script>
+  
 </html>
